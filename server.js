@@ -40,4 +40,6 @@ app.get("/api/:rapperName", (request, response) => {
     else response.json(rappers["dylan"]);
 });
 
-app.listen(PORT, () => console.log("server init on port:", PORT));
+app.listen(process.env.PORT || PORT, () =>
+    console.log("server init on port:", PORT)
+);
