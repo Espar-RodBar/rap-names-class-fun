@@ -4,7 +4,7 @@ const inputText = document.querySelector("input");
 
 async function getRapperName() {
     const rapperName = inputText.value;
-    console.log(rapperName);
+    console.log("debug", rapperName);
     try {
         const res = await fetch(
             `https://good-rose-barracuda-tutu.cyclic.app//api/${rapperName}`
