@@ -13,10 +13,10 @@ async function getRapperName() {
             `https://good-rose-barracuda-tutu.cyclic.app/api/${rapperName}`
         );
         const data = await res.json();
-        console.log(data);
-        nameH2.innerHTML += data[age];
-        ageH2.innerHTML += data[age];
-        locationH2.innerHTML += data[age];
+
+        nameH2.innerText = data["birthName"];
+        ageH2.innerText = data["age"];
+        locationH2.innerText = data["birthLocation"];
     } catch (err) {
         console.log(err);
     }

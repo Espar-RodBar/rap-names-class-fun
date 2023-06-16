@@ -9,12 +9,12 @@ app.use(express.static("public"));
 const rappers = {
     "21 savage": {
         age: 29,
-        biRthName: "Shéyaa Bin Abraham-Joseph",
+        birthName: "Shéyaa Bin Abraham-Joseph",
         birthLocation: "London, England",
     },
     "chance the rapper": {
         age: 30,
-        biRthName: "SChancelor Jonathan Bennett",
+        birthName: "SChancelor Jonathan Bennett",
         birthLocation: "Chicago, USA",
     },
     dylan: {
