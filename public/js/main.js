@@ -14,7 +14,9 @@ async function getRapperName() {
         );
         const data = await res.json();
         console.log(data);
-        nameH2.innerHTML = data[birthName];
+        nameH2.innerHTML += data[age];
+        ageH2.innerHTML += data[age];
+        locationH2.innerHTML += data[age];
     } catch (err) {
         console.log(err);
     }
