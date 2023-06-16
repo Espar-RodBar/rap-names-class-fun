@@ -29,16 +29,16 @@ app.get("/", (request, response) => {
     response.sendFile(__dirname + "/index.html");
 });
 
-app.get("/api", (request, response) => {
-    console.log("/api");
-    response.json(rappers);
-});
-
 app.get("/api/:rapperName", (request, response) => {
     const name = request.params.rapperName.toLowerCase();
     console.log("api requested name:", name);
     if (rappers[name]) response.json(rappers[name]);
     else response.json(rappers["dylan"]);
+});
+
+app.get("/api", (request, response) => {
+    console.log("/api");
+    response.json(rappers);
 });
 
 app.listen(process.env.PORT || PORT, () =>
