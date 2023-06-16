@@ -30,12 +30,13 @@ app.get("/", (request, response) => {
 });
 
 app.get("/api", (request, response) => {
+    console.log("/api");
     response.json(rappers);
 });
 
 app.get("/api/:rapperName", (request, response) => {
     const name = request.params.rapperName.toLowerCase();
-    console.log("requested name:", name);
+    console.log("api requested name:", name);
     if (rappers[name]) response.json(rappers[name]);
     else response.json(rappers["dylan"]);
 });

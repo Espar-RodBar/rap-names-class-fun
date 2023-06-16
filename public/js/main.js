@@ -8,7 +8,8 @@ async function getRapperName() {
         const res = await fetch(
             `https://good-rose-barracuda-tutu.cyclic.app//api/${rapperName}`
         );
-        console.log(res);
+        const data = await res.json();
+        console.log(data);
     } catch (err) {
         console.log(err);
     }
