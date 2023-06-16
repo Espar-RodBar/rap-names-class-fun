@@ -3,7 +3,8 @@ const cors = require("cors");
 const app = express();
 const PORT = 8000;
 
-app.subscribe(cors());
+app.use(cors());
+app.use(express.static("public"));
 
 const rappers = {
     "21 savage": {
@@ -24,12 +25,8 @@ const rappers = {
 };
 
 app.get("/", (request, response) => {
+    console.log("index requested");
     response.sendFile(__dirname + "/index.html");
-});
-
-app.get("/js", (request, response) => {
-    console.log(request.body);
-    response.sendFile(__dirname + "/js/main.js");
 });
 
 app.get("/api", (request, response) => {
