@@ -19,7 +19,7 @@ const rappers = {
     },
     dylan: {
         age: 30,
-        bithName: "Dylan",
+        birthName: "Dylan",
         birthLocation: "Dylan",
     },
 };
